@@ -70,3 +70,14 @@
 7. Visualizing data with Matplotlib
 
 </details>
+
+## What You Need:
+As the Bootcamp is open to anyone, we encourage members of our community, Facebook Developers Circle Nairobi at Zetech University to actively engange in the activities.
+
+
+## Contributing To The Repo
+
+1. Fork the repo to your GitHub Account. [Guide](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/fork-a-repo)
+2. Create a new branch with a name in conjuction to your update/fix
+   
+   [Read More On Contributions](CONTRIBUTING.md)
