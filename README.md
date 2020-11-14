@@ -1,7 +1,9 @@
 # Python BootCamp
 
+![python-logo](python.svg)
+
+
 <div align='center'>
-    ![python-logo](python.svg)
     Facebook Developers Circle Nairobi at Zetech University || CodeIT, Zetech University
 </div>
 
