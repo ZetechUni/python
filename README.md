@@ -74,6 +74,23 @@
 
 </details>
 
+## Setting Up Your Developer Environment
+
+### Python
+>Preferably version 3,
+
+[Download Python](https://www.python.org/downloads/)
+
+### git
+
+[Download Git](https://git-scm.com/)
+
+[Git COnfiguration](https://dev.to/chrisachinga/git-and-github-install-configure-51pa)
+
+### GitHub Account
+
+[Create Account](https://github.com)
+
 ## What You Need:
 
 As the Bootcamp is open to anyone, we encourage members of our community, Facebook Developers Circle Nairobi at Zetech University to actively engange in the activities.
