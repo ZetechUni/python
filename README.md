@@ -85,7 +85,7 @@
 
 [Download Git](https://git-scm.com/)
 
-[Git COnfiguration](https://dev.to/chrisachinga/git-and-github-install-configure-51pa)
+[Git Configuration](https://dev.to/chrisachinga/git-and-github-install-configure-51pa)
 
 ### GitHub Account
 
