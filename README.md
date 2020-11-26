@@ -102,7 +102,10 @@ As the Bootcamp is open to anyone, we encourage members of our community, Facebo
 
    [Read More On Contributions](CONTRIBUTING.md)
 
-# WEEK 1: Introduction
+
+<details>
+
+<summary># WEEK 1: Introduction </summary>
 
 1. ## Print
 
@@ -232,3 +235,5 @@ As the Bootcamp is open to anyone, we encourage members of our community, Facebo
    - <= less than or equal to
    - != not equal to
    - **x _in_ [a,b,c]** Does x match the value of a, b, or c
+
+</details>
