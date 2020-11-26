@@ -2,7 +2,6 @@
 
 ![python-logo](python.svg)
 
-
 <div align='center'>
     Facebook Developers Circle Nairobi at Zetech University || CodeIT, Zetech University
 </div>
@@ -77,7 +76,8 @@
 ## Setting Up Your Developer Environment
 
 ### Python
->Preferably version 3,
+
+> Preferably version 3,
 
 [Download Python](https://www.python.org/downloads/)
 
@@ -101,3 +101,34 @@ As the Bootcamp is open to anyone, we encourage members of our community, Facebo
 2. Create a new branch with a name in conjuction to your update/fix
 
    [Read More On Contributions](CONTRIBUTING.md)
+
+# WEEK 1:
+
+1. ## Print
+   The print function allows you to send output to the terminal
+
+   - [print](https://docs.python.org/3/library/functions.html#print)
+
+   Strings can be enclosed in single quotes or double quotes
+
+   - "this is a string"
+   - 'this is also a string'
+
+   The input function allows you to prompt a user for a value
+
+   - [input](https://docs.python.org/3/library/functions.html#input)
+
+   Parameters:
+
+   - `prompt`: Message to display to the user
+
+   return value:
+
+   - string value containing value entered by user
+
+2. ## Variables: Numeric
+3. ## Variables: String
+4. ## Dates
+5. ## Error Handling
+6. ## Conditions
+7. ## Multiple Conditions
