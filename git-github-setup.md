@@ -59,10 +59,10 @@ Resources:
 
 ### Activity 2
 
-Head over to https://github.com/ZetechUni/github-collaborations
-Fork the repository
-Create a new branch using the following naming convection: ({github-username}-patch)
-Add your details in the README.md under the "Contributors" title.
-Update your repository.
-Create a pull request.
-After creating a pull request, create an issue:
+- Head over to https://github.com/ZetechUni/github-collaborations
+- Fork the repository
+- Create a new branch using the following naming convection: ({github-username}-patch)
+- Add your details in the README.md under the "Contributors" title.
+- Update your repository.
+- Create a pull request.
+- After creating a pull request, create an issue:
