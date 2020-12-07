@@ -16,21 +16,35 @@ Python comes pre-installed on Linux OS. For Windows you will have to Download.
 Download Python [here](https://www.python.org/downloads/)
 
 ### Resources
+[Python For Beginnes](https://docs.microsoft.com/en-us/windows/python/beginners)
 
-[Setting Up](https://docs.microsoft.com/en-us/windows/python/beginners)
+### Text Editors
 
-<details>
-<summary>Week 1</summary>
+Use a text-editor of your choice:
 
-1. Print
-2. Variables: Numeric
-3. Variables: String
-4. Dates
-5. Error Handling
-6. Conditions
-7. Multiple Conditions
+Recommended are:
 
-</details>
+[Visual Studio Code](https://code.visualstudio.com/)
+[Atom](https://atom.io/)
+[Sublime Text](https://www.sublimetext.com/)
+
+### Git and GitHub Setup.
+
+Note that you have to pass the challenges in git and github to proceed to the next stages.
+They are essential tools in development for code sharing and collaboration.
+
+[Get Started Here](git-github-setup.md)
+
+[Raise an Issue if encountering a blocker](https://github.com/ZetechUni/python-bootcamp/issues/new)
+
+## Practice Code
+
+1. [Print](source/week-1/print)
+2. [Variables](source/week-1/variables)
+3. [Dates](source/week-1/dates)
+4. [Error Handling](source/week-1/error-handling)
+5. [Conditions](source/week-1/conditions)
+
 
 <details>
 <summary>Week 2</summary>
