@@ -8,6 +8,17 @@
 
 ## 5 Weeks Of Python (Roadmap)
 
+
+## Week 1: Environment Setup and Introduction
+
+### Downloading Python
+Python comes pre-installed on Linux OS. For Windows you will have to Download.
+Download Python [here](https://www.python.org/downloads/)
+
+### Resources
+
+[Setting Up](https://docs.microsoft.com/en-us/windows/python/beginners)
+
 <details>
 <summary>Week 1</summary>
 
