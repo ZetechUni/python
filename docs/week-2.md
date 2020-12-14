@@ -23,7 +23,7 @@
    [For loops](https://docs.python.org/3/reference/compound_stmts.html#the-for-statement) takes each item in an array or collection in order, and assigns it to the variable you define.
 
    ```python
-   names = ['Christopher', 'Susan']
+   names = ['John Doe', 'Jane Doe']
    for name in names:
       print(name)
    ```
