@@ -2,6 +2,8 @@
 
 Jupyter Notebooks are an open source web application that allows you to create and share Python code. They are frequently used for data science. The code samples in this course are completed using Jupyter Notebooks which have a .ipynb file extension.
 
+![Jupyter Notebook](https://miro.medium.com/max/2544/1*ezJx8ZEu1Va14iscq_h5Gg.png)
+
 ## Documentation
 
 - [Jupyter](https://jupyter.org/) to install Jupyter so you can run Jupyter Notebooks locally on your computer

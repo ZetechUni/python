@@ -5,6 +5,9 @@ When preparing data for machine learning you may need to remove specific columns
 ## Common functions
 
 - [drop](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.drop.html) deletes specified columns from a DataFrame
+  - `inplace`
+    - If `False`, returns a modified copy of the dataframe
+    - If `True`, it modifies the original dataframe
 
 ## Microsoft Learn Resources
 

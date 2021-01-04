@@ -1,6 +1,6 @@
-# pandas
+# Pandas
 
-[pandas](https://pandas/pydata.org​) is an open source Python library contains a number of high performance data structures and tools for data analysis.
+[Pandas](https://pandas/pydata.org​) is an open source Python library contains a number of high performance data structures and tools for data analysis.
 
 ## Documentation
 
