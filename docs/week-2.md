@@ -1,0 +1,148 @@
+# Week 2: The Basics
+
+1. ## Collections (list, arrays, ranges)
+
+   Collections are groups of items. Python supports several types of collections. Three of the most common are dictionaries, lists and arrays.
+
+   ### Lists
+
+   [Lists](https://docs.python.org/3/tutorial/introduction.html#lists) are a collection of items. Lists can be expanded or contracted as needed, and can contain any data type. Lists are most commonly used to store a single column collection of information, however it is possible to [nest lists](https://docs.python.org/3/tutorial/datastructures.html#nested-list-comprehensions)
+
+   ### Arrays
+
+   [Arrays](https://docs.python.org/3/library/array.html) are similar to lists, however are designed to store a uniform basic data type, such as integers or floating point numbers.
+
+   ### Dictionaries
+
+   [Dictionaries](https://docs.python.org/3/tutorial/datastructures.html#dictionaries) are key/value pairs of a collection of items. Unlike a list where items can only be accessed by their index or value, dictionaries use keys to identify each item.
+
+2. ## Loops
+
+   ### For loops
+
+   [For loops](https://docs.python.org/3/reference/compound_stmts.html#the-for-statement) takes each item in an array or collection in order, and assigns it to the variable you define.
+
+   ```python
+   names = ['John Doe', 'Jane Doe']
+   for name in names:
+      print(name)
+   ```
+
+   ### While loops
+
+   [While loops](https://docs.python.org/3/reference/compound_stmts.html#the-while-statement) perform an operation as long as a condition is true.
+
+   ```python
+   names = ['Christopher', 'Susan']
+   index = 0
+   while index < len(names):
+      name = names[index]
+      print(name)
+      index = index + 1
+   ```
+
+3. ## Functions
+
+   Functions allow you to take code that is repeated and move it to a module that can be called when needed. Functions are defined with the `def` keyword and must be declared before the function is called in your code. Functions can accept parameters and return values.
+
+   - [Functions](https://docs.python.org/3/tutorial/controlflow.html#defining-functions)
+
+   ```python
+   def functionname(parameter):
+      # code to execute
+      return value
+   ```
+
+4. ## Functions with Parameters
+
+   Functions allow you to take code that is repeated and move it to a module that can be called when needed. Functions are defined with the `def` keyword and must be declared before the function is called in your code. Functions can accept one or more parameters and return values.
+
+   - [Functions](https://docs.python.org/3/tutorial/controlflow.html#defining-functions)
+
+   ```python
+   def function_name(parameter):
+      # code to execute
+      return value
+   ```
+
+   Parameters can be assigned a [default value](https://docs.python.org/3/tutorial/controlflow.html#default-argument-values) making them optional when the function is called.
+
+   ```python
+   def function_name(parameter=default):
+      # code to execute
+      return value
+   ```
+
+   When you call a function you may specify the values for the parameters using positional or [named notation](https://docs.python.org/3/tutorial/controlflow.html#keyword-arguments)
+
+   ```python
+   def function_name(parameter1, parameter2):
+      # code to execute
+      return value
+
+   # Positional notation pass in arguments in same order as parameters are declared
+   result = function_name(value1,value2)
+
+   # Named notation
+   result = function_name(parameter1=value1, parameter2=value2)
+   ```
+
+5. ## Modules & Packages
+
+   ### Modules
+
+   [Modules](https://docs.python.org/3/tutorial/modules.html) allow you to store reusable blocks of code, such as functions, in separate files. They're referenced by using the `import` statement.
+
+   ```python
+   # import module as namespace
+   import helpers
+   helpers.display('Not a warning')
+
+   # import all into current namespace
+   from helpers import *
+   display('Not a warning')
+
+   # import specific items into current namespace
+   from helpers import display
+   display('Not a warning')
+   ```
+
+   ### Packages
+
+   [Distribution packages](https://packaging.python.org/glossary/#term-distribution-package) are external archive files which contain resources such as classes and functions. Most every application you create will make use of one or more packages. Imports from packages follow the same syntax as modules you've created. The [Python Package index](https://pypi.org/) contains a full list of packages you can install using [pip](https://pip.pypa.io/en/stable/).
+
+   ### Virtual environments
+
+   [Virtual environments](https://docs.python.org/3.7/tutorial/venv.html) allow you to install packages into an isolated folder. This allows you to better manage versions.
+
+   ```console
+
+   ```
+
+6. ## JSON with Python
+
+   Many APIs return data in [JSON](https://json.org/), JavaScript Object Notation. JSON is a standard format that can is readable by humans and parsed or generated by code.
+
+   JSON is built on two structures:
+
+   - collections of key/value pairs
+   - lists of values
+
+   JSON Linters will format JSON so it easier to read by a human. The following website have JSON linters:
+
+   - [JSONLint](https://jsonlint.com/)
+   - [ConvertJson.com](http://www.convertjson.com/jsonlint.htm)
+   - [JSON schema linter](https://www.json-schema-linter.com/)
+
+   Python includes a [json](https://docs.python.org/2/library/json.html) module which helps you encode and decode JSON
+
+7. ## Decorators
+
+   [Decorators](https://www.python.org/dev/peps/pep-0318/) are similar to attributes in that they add meaning or functionality to blocks of code in Python. They're frequently used in frameworks such as [Flask](http://flask.pocoo.org/) or [Django](https://www.djangoproject.com/). The most common interaction you'll have with decorators as a Python developer is through using them rather than creating them.
+
+   ```python
+   # Example decorator
+   @log(True)
+   def sample_function():
+      print('this is a sample function')
+   ```

@@ -3,4 +3,4 @@
 # You need to declare a variable to hold the value entered by the user
 Name = input('What is your name? ')
 
-print(Name)
+print('Great, your name is '+ Name)
