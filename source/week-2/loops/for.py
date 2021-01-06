@@ -1,2 +1,2 @@
-for name in ['Christopher', 'Susan']:
+for name in ['John Doe', 'Jane Doe']:
 	print(name)
