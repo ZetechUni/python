@@ -37,6 +37,7 @@ Resources:
 ### Activity 1:
 
 - Create a GitHub Repository using your account.
+- Use your GitHub username as the name of the repository, (Exact characters)
 - Clone the repository to your local environment, using either git or gh-cli.
 - Create a new file: 
   
@@ -62,7 +63,15 @@ Resources:
 - Head over to https://github.com/ZetechUni/github-collaborations
 - Fork the repository
 - Create a new branch using the following naming convection: ({github-username}-patch)
-- Add your details in the README.md under the "Contributors" title.
+- Add the following details in the README.md under the "Contributors" title:
+- Your GitHub Username
+    - The Link to Repository Created in Activity 1
+    - A sentence describing who you are:
+    - The Format will be as follows:
+
+    ```markdown
+    |#    |    {user-name}     |     {repo-link}    |    {about-me}     |
+    ```
 - Update your repository.
 - Create a pull request.
-- After creating a pull request, create an issue:
+- After creating a pull request, create an issue using the same name as the pull request:
