@@ -8,14 +8,13 @@
 
 ## 5 Weeks Of Python (Roadmap)
 
+[Week 1](week-1)
+[Week 2](week-2)
+[Week 3](week-3)
+[Week 4](week-4)
+[Week 5](week-5)
 
-[Week 1](docs/week-1.md)
-[Week 2](docs/week-2.md)
-[Week 3](docs/week-3.md)
-[Week 4](docs/week-3.md)
-[Week 5](docs/week-5.md)
-
-<!-- 
+<!--
 <details>
 <summary>Week 2</summary>
 
@@ -96,4 +95,3 @@ As the Bootcamp is open to anyone, we encourage members of our community, Facebo
 2. Create a new branch with a name in conjuction to your update/fix
 
    [Read More On Contributions](CONTRIBUTING.md)
-
