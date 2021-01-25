@@ -41,7 +41,7 @@ Resources:
 - Clone the repository to your local environment, using either git or gh-cli.
 - Create a new file: 
   
-  >Use the following naming convection: {github-username}.txt
+  >Use the following naming convection: README.md
 - Add the following details to the created file: 
 
     >your github username and your github email
