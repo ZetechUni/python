@@ -1,4 +1,4 @@
-import bus_fare_challenge
+import bus_fare_challenge as solution
 import datetime
 import unittest
 
@@ -12,7 +12,7 @@ class TestBusFareChallenge(unittest.TestCase):
             "Tue": 100,
             "Wed": 100,
             "Thu": 100,
-            "Thu": 100,
+            "Fri": 100,
             "Sat": 60,
             "Sun": 80,
         }
@@ -22,7 +22,7 @@ class TestBusFareChallenge(unittest.TestCase):
         Tests whether the date returned by the program is correct.
         """
         actual = self.date
-        given = bus_fare_challenge.date
+        given = solution.date
         self.assertEqual(actual, given, f"Today's date is Wrong by {given - actual}!")
 
     def test_day(self) -> None:
@@ -30,7 +30,7 @@ class TestBusFareChallenge(unittest.TestCase):
         Tests whether the day returned by the program is correct.
         """
         actual = self.day
-        given = bus_fare_challenge.day
+        given = solution.day
         self.assertEqual(
             actual, given, f"Today is wrong, expexted {actual} but got {given}!"
         )
@@ -40,7 +40,7 @@ class TestBusFareChallenge(unittest.TestCase):
         Tests whether the fare returned by the program is correct.
         """
         actual = self.charts[self.day]
-        given = bus_fare_challenge.fare
+        given = solution.fare
         self.assertEqual(
             actual, given, f"Fare is wrong, expected {actual} but got {given}!"
         )
