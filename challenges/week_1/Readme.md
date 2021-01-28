@@ -29,3 +29,40 @@ Run the [Checker](checker.py) file to evaluate your code. If all tests pass, you
    - `'fare'`  
 *Failure to which all your tests will fail.*  
 3. The **Checker** file should **never** be **altered** at any cost.
+
+
+Famous-Bern bus_fare_challenge Pseudocode
+
+set date = get todays date using datetime module
+set day = get day using datetime date.strftime object in short form.
+
+if day evaluates to todays day
+set fare
+print output date\nday\nfare
+
+elif 2 day evaluates to todays day
+set fare
+print output date\nday\nfare
+
+elif 3 day evaluates to todays day
+set fare
+print output date\nday\nfare
+
+elif 4 day evaluates to todays day
+set fare
+print output date\nday\nfare
+
+elif 5 day evaluates to todays day
+set fare
+print output date\nday\nfare
+
+elif 6 day evaluates to todays day
+set fare
+print output date\nday\nfare
+
+elif 7 day evaluates to todays day
+set fare
+print output date\nday\nfare
+
+else
+print('Done')
