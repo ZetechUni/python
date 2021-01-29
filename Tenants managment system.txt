@@ -1,0 +1,543 @@
+import tkinter
+import tkinter as tk
+import tkinter.ttk as ttk
+import tkinter.scrolledtext as Tk
+import sqlite3
+
+# Create a window .
+window = tk.Tk()
+window.title(" Ternants Management System :")
+# create menubar
+Menubar = tk.Menu()
+window.config(menu=Menubar)
+# Create a filemenu.
+Filemenu = tk.Menu(Menubar, tearoff=0)
+Filemenu.add_command(label="New Record")
+Filemenu.add_separator()
+Filemenu.add_command(label="Save As")
+Filemenu.add_separator()
+Filemenu.add_command(label="Save ")
+Filemenu.add_separator()
+Filemenu.add_command(label="Print ")
+Filemenu.add_separator() 
+Menubar.add_cascade(label="File", menu=Filemenu)
+
+# Create a EditMenu.
+Editmenu = tk.Menu(Menubar, tearoff=0)
+Editmenu.add_command(label="Delete")
+Editmenu.add_separator()
+Editmenu.add_command(label="Update")
+Menubar.add_cascade(label="Edit", menu=Editmenu)
+
+# Create a viewmenu.
+Viewmenu = tk.Menu(Menubar, tearoff=0)
+Viewmenu.add_command(label="Show Database")
+Viewmenu.add_separator()
+Viewmenu.add_command(label="Show tables")
+Menubar.add_cascade(label="View", menu=Viewmenu)
+
+# Create TabControl.
+TabControl = ttk.Notebook(window)
+Ternants = tk.Frame(TabControl)
+Owners = tk.Frame(TabControl)
+TabControl.add(Ternants, text="Ternants")
+TabControl.add(Owners, text="Owners")
+TabControl.pack(expand=1, fill="both")
+
+# Create a new tab for Ternants.
+TabControl = ttk.Notebook(Ternants)
+Ternants_Personal_Details_Create = tk.Frame(TabControl, bg="green")
+Ternants_Personal_Details_Update = tk.Frame(TabControl, bg="green")
+Ternants_Personal_Details_Delete = tk.Frame(TabControl, bg="green")
+Ternants_Rent_Payment = tk.Frame(TabControl)
+List_of_Ternants = tk.Frame(TabControl)
+Update_Ternants_Records = tk.Frame(TabControl)
+TabControl.add (Ternants_Personal_Details_Create,
+               text="Create New Ternants Records ")
+TabControl.add(Ternants_Personal_Details_Update,
+               text="Update  Ternants Records ")
+TabControl.add(Ternants_Personal_Details_Delete,
+               text="Delete  Ternants Records ")
+TabControl.add(Ternants_Rent_Payment, text="Ternants Rent Payment ")
+TabControl.add(List_of_Ternants, text="List of Ternants ")
+TabControl.pack(expand=1, fill="both")
+
+# Create new Record for Ternants.
+Ternants_Personal_Details_Create_Labelframe = tk.LabelFrame(
+    Ternants_Personal_Details_Create, bg="brown", fg="maroon", text="Create New Ternants Records")
+Ternants_Personal_Details_Create_Labelframe.pack(expand=1)
+Ternants_first_name = tk.Label(
+    Ternants_Personal_Details_Create_Labelframe, text="First Name:", bg="blue", fg="purple")
+Ternants_first_name.grid(column=0, row=0, sticky="WE")
+Ternants_First_name = tk.Entry(
+    Ternants_Personal_Details_Create_Labelframe, width=100)
+Ternants_First_name.grid(column=1, row=0)
+ 
+Ternants_second_name = tk.Label(
+    Ternants_Personal_Details_Create_Labelframe, text="Second Name:", bg="blue", fg="purple")
+Ternants_second_name.grid(column=2, row=0, sticky="WE")
+Ternants_Second_name = tk.Entry(
+    Ternants_Personal_Details_Create_Labelframe, width=100)
+Ternants_Second_name.grid(column=3, row=0)
+
+
+# Filling up space.
+Ternants_ = tk.Label(
+    Ternants_Personal_Details_Create_Labelframe, text="       ", bg="orange")
+Ternants_.grid(column=0, row=1)
+
+Ternants_third_name = tk.Label(
+    Ternants_Personal_Details_Create_Labelframe, text="Third Name:", bg="blue", fg="purple")
+Ternants_third_name.grid(column=0, row=4, sticky="WE")
+Ternants_Third_name = tk.Entry(Ternants_Personal_Details_Create_Labelframe)
+Ternants_Third_name.grid(column=1, row=4, sticky="WE")
+
+Ternants_house_number = tk.Label(
+    Ternants_Personal_Details_Create_Labelframe, text="house number:", bg="blue", fg="purple")
+Ternants_house_number.grid(column=2, row=4, sticky="WE")
+Ternants_house_number = tk.Entry(
+    Ternants_Personal_Details_Create_Labelframe)
+Ternants_house_number.grid(column=3, row=4, sticky="WE")
+
+# Filling up space.
+Ternants_ = tk.Label(
+    Ternants_Personal_Details_Create_Labelframe, text="       ", bg="orange")
+Ternants_.grid(column=0, row=5)
+
+Ternants_gender = tk.Label(
+    Ternants_Personal_Details_Create_Labelframe, text="Gender:", bg="blue", fg="purple")
+Ternants_gender.grid(column=0, row=6, sticky="WE")
+Ternants_Gender = tk.Entry(Ternants_Personal_Details_Create_Labelframe)
+Ternants_Gender.grid(column=1, row=6, sticky="WE")
+
+Ternants_phone_number = tk.Label(
+    Ternants_Personal_Details_Create_Labelframe, text="Phone number:", bg="blue", fg="purple")
+Ternants_phone_number.grid(column=2, row=6)
+Ternants_phone_number = tk.Entry(
+    Ternants_Personal_Details_Create_Labelframe)
+Ternants_phone_number.grid(column=3, row=6, sticky="WE")
+
+# Filling up space.
+Ternants_ = tk.Label(
+    Ternants_Personal_Details_Create_Labelframe, text="       ", bg="orange")
+Ternants_.grid(column=0, row=7)
+
+Ternants_location= tk.Label(
+    Ternants_Personal_Details_Create_Labelframe, text="Location:", bg="blue", fg="purple")
+Ternants_location.grid(column=0, row=8, sticky="WE")
+Ternants_Location = tk.Entry(Ternants_Personal_Details_Create_Labelframe)
+Ternants_Location.grid(column=1, row=8, sticky="WE")
+
+
+# Filling up space.
+Ternants_ = tk.Label(
+    Ternants_Personal_Details_Create_Labelframe, text="       ", bg="orange")
+Ternants_.grid(column=1, row=7)
+
+Ternants_Create = tk.Button(Ternants_Personal_Details_Create_Labelframe,
+                           text="Create Record", bg="purple", fg="blue", height=6)
+Ternants_Create.grid(column=0, row=8, sticky="WE")
+
+# Update Ternants Records 
+
+Ternants_Personal_Details_Create_Labelframe = tk.LabelFrame(
+    Ternants_Personal_Details_Update, bg="violet", fg="black", text="Update Ternants Records")
+Ternants_Personal_Details_Create_Labelframe.pack(expand=1)
+Ternants_first_name = tk.Label(
+    Ternants_Personal_Details_Create_Labelframe, text="First Name:", bg="blue", fg="purple")
+Ternants_first_name.grid(column=0, row=0, sticky="WE")
+Ternants_First_name = tk.Entry(
+    Ternants_Personal_Details_Create_Labelframe, width=100)
+Ternants_First_name.grid(column=1, row=0)
+
+Ternants_second_name = tk.Label(
+    Ternants_Personal_Details_Create_Labelframe, text="Second Name:", bg="blue", fg="purple")
+Ternants_second_name.grid(column=2, row=0, sticky="WE")
+Ternants_Second_name = tk.Entry(
+    Ternants_Personal_Details_Create_Labelframe, width=100)
+Ternants_Second_name.grid(column=3, row=0)
+# Filling up space.
+Ternants_ = tk.Label(
+    Ternants_Personal_Details_Create_Labelframe, text="       ", bg="orange")
+Ternants_.grid(column=0, row=1)
+
+Ternants_third_name = tk.Label(
+    Ternants_Personal_Details_Create_Labelframe, text="Third Name:", bg="blue", fg="purple")
+Ternants_third_name.grid(column=0, row=4, sticky="WE")
+Ternants_Third_name = tk.Entry(Ternants_Personal_Details_Create_Labelframe)
+Ternants_Third_name.grid(column=1, row=4, sticky="WE")
+
+Ternants_house_number = tk.Label(
+    Ternants_Personal_Details_Create_Labelframe, text="house number:", bg="blue", fg="purple")
+Ternants_house_number.grid(column=2, row=4, sticky="WE")
+Ternants_house_number = tk.Entry(
+    Ternants_Personal_Details_Create_Labelframe)
+Ternants_house_number.grid(column=3, row=4, sticky="WE")
+
+# Filling up space.
+Ternants_ = tk.Label(
+    Ternants_Personal_Details_Create_Labelframe, text="       ", bg="orange")
+Ternants_.grid(column=0, row=5)
+
+Ternant_gender = tk.Label(
+    Ternants_Personal_Details_Create_Labelframe, text="Gender:", bg="blue", fg="purple")
+Ternants_gender.grid(column=0, row=6, sticky="WE")
+Ternants_Gender = tk.Entry(Ternants_Personal_Details_Create_Labelframe)
+Ternants_Gender.grid(column=1, row=6, sticky="WE")
+
+Ternants_phone_number = tk.Label(
+    Ternants_Personal_Details_Create_Labelframe, text=" Phone number:", bg="blue", fg="purple")
+Ternants_phone_number.grid(column=2, row=6)
+Ternants_phone_number = tk.Entry(
+    Ternants_Personal_Details_Create_Labelframe)
+Ternants_phone_number.grid(column=3, row=6, sticky="WE")
+
+# Filling up space.
+Ternants_ = tk.Label(
+    Ternants_Personal_Details_Create_Labelframe, text="       ", bg="orange")
+Ternants_.grid(column=0, row=7)
+
+Ternants_Create = tk.Button(Ternants_Personal_Details_Create_Labelframe,
+                           text="Update Record", bg="purple", fg="blue", height=6)
+Ternants_Create.grid(column=0, row=8, sticky="WE")
+
+# Delete Ternants Record.
+Ternants_Personal_Details_Create_Labelframe = tk.LabelFrame(
+    Ternants_Personal_Details_Delete, bg="indigo", fg="purple", text="Delete Ternants Records")
+Ternants_Personal_Details_Create_Labelframe.pack(expand=1)
+Ternants_first_name = tk.Label(
+    Ternants_Personal_Details_Create_Labelframe, text="First Name:", bg="blue", fg="purple")
+Ternants_first_name.grid(column=0, row=0, sticky="WE")
+Ternants_First_name = tk.Entry(
+    Ternants_Personal_Details_Create_Labelframe, width=100)
+Ternants_First_name.grid(column=1, row=0)
+
+Ternants_second_name = tk.Label(
+    Ternants_Personal_Details_Create_Labelframe, text="Second Name:", bg="blue", fg="purple")
+Ternants_second_name.grid(column=2, row=0, sticky="WE")
+Ternants_Second_name = tk.Entry(
+    Ternants_Personal_Details_Create_Labelframe, width=100)
+Ternants_Second_name.grid(column=3, row=0)
+
+# Filling up space.
+Ternants_ = tk.Label(
+    Ternants_Personal_Details_Create_Labelframe, text="       ", bg="orange")
+Ternants_.grid(column=0, row=1)
+
+Ternants_third_name = tk.Label(
+    Ternants_Personal_Details_Create_Labelframe, text="Third Name:", bg="blue", fg="purple")
+Ternants_third_name.grid(column=0, row=4, sticky="WE")
+Ternants_Third_name = tk.Entry(Ternants_Personal_Details_Create_Labelframe)
+Ternants_Third_name.grid(column=1, row=4, sticky="WE")
+
+Ternants_house_number = tk.Label(
+    Ternants_Personal_Details_Create_Labelframe, text="house number:", bg="blue", fg="purple")
+Ternants_house_number.grid(column=2, row=4, sticky="WE")
+Ternants_house_number = tk.Entry(
+    Ternants_Personal_Details_Create_Labelframe)
+Ternants_house_number.grid(column=3, row=4, sticky="WE")
+
+# Filling up space.
+Ternants_ = tk.Label(
+    Ternants_Personal_Details_Create_Labelframe, text="       ", bg="orange")
+Ternants_.grid(column=0, row=5)
+
+Ternants_gender = tk.Label(
+    Ternants_Personal_Details_Create_Labelframe, text="Gender:", bg="blue", fg="purple")
+Ternants_gender.grid(column=0, row=6, sticky="WE")
+Ternants_Gender = tk.Entry(Ternants_Personal_Details_Create_Labelframe)
+Ternants_Gender.grid(column=1, row=6, sticky="WE")
+
+Ternants_phone_number = tk.Label(
+    Ternants_Personal_Details_Create_Labelframe, text=" Phone number:", bg="blue", fg="purple")
+Ternants_phone_number.grid(column=2, row=6)
+Ternants_phone_number = tk.Entry(
+    Ternants_Personal_Details_Create_Labelframe)
+Ternants_phone_number.grid(column=3, row=6, sticky="WE")
+
+# Filling up space.
+Ternants_ = tk.Label(
+    Ternants_Personal_Details_Create_Labelframe, text="       ", bg="orange")
+Ternants_.grid(column=0, row=7)
+
+Ternants_Create = tk.Button(Ternants_Personal_Details_Create_Labelframe,
+                           text="Update Record", bg="purple", fg="blue", height=6)
+Ternants_Create.grid(column=0, row=8, sticky="WE")
+
+#Ternants Rent Payment
+
+Ternants_Personal_Details_Create_Labelframe = tk.LabelFrame(
+    Ternants_Rent_Payment, bg="violet", fg="purple", text="Ternants Rent Payment")
+Ternants_Personal_Details_Create_Labelframe.pack(expand=1)
+Ternants_first_name = tk.Label(
+    Ternants_Personal_Details_Create_Labelframe, text="First Name:", bg="blue", fg="purple")
+Ternants_first_name.grid(column=0, row=0, sticky="WE")
+Ternants_First_name = tk.Entry(
+    Ternants_Personal_Details_Create_Labelframe, width=100)
+Ternants_First_name.grid(column=1, row=0)
+
+Ternants_second_name = tk.Label(
+    Ternants_Personal_Details_Create_Labelframe, text="Second Name:", bg="blue", fg="purple")
+Ternants_second_name.grid(column=3, row=0, sticky="WE")
+Ternants_Second_name = tk.Entry(
+    Ternants_Personal_Details_Create_Labelframe, width=100)
+Ternants_Second_name.grid(column=4, row=0)
+#List of Ternants.
+Ternants_Personal_Details_Create_Labelframe = tk.LabelFrame(
+    List_of_Ternants, bg="indigo", fg="violet", text="List of  Ternants Records")
+Ternants_Personal_Details_Create_Labelframe.pack(expand=1, fill="both")
+Ternants_phone_number = tk.Label(
+    Ternants_Personal_Details_Create_Labelframe, text="Search using house Number", bg="blue", fg="purple")
+Ternants_phone_number.grid(column=0, row=0)
+Ternants_phone_number = tk.Entry(
+    Ternants_Personal_Details_Create_Labelframe)
+Ternants_phone_number.grid(column=1, row=0, sticky="WE")
+Ternants_Create = tk.Button(Ternants_Personal_Details_Create_Labelframe,
+                            text="Search using house Number", bg="purple", fg="blue", height=4)
+Ternants_Create.grid(column=0, row=1, sticky="WE")
+
+
+# Create a new tab for Owners
+TabControl = ttk.Notebook(Owners)
+Create_New_Owners_Records = tk.Frame(TabControl, bg="green")
+Update_Owners_Records = tk.Frame(TabControl, bg="green")
+Delete_Owners_Records = tk.Frame(TabControl, bg="green")
+List_of_Owners = tk.Frame(TabControl, bg="green")
+TabControl.add(Create_New_Owners_Records,
+               text="Create New Owners Records ")
+TabControl.add(Update_Owners_Records, text="Update Owners Records ")
+TabControl.add(Delete_Owners_Records, text="Delete Owners Records ")
+TabControl.add(List_of_Owners, text="List of Owners")
+TabControl.pack(expand=1, fill="both")
+
+
+
+
+# Create New Owners Records.
+
+Owners_Personal_Details_Create_Labelframe = tk.LabelFrame(
+    Create_New_Owners_Records, bg="indigo", fg="violet", text="Create New  Owners Records")
+Owners_Personal_Details_Create_Labelframe.pack(expand=1)
+Owners_first_name = tk.Label(
+    Owners_Personal_Details_Create_Labelframe, text="First Name:", bg="blue", fg="purple")
+Owners_first_name.grid(column=0, row=0, sticky="WE")
+Owners_First_name = tk.Entry(
+    Owners_Personal_Details_Create_Labelframe, width=100)
+Owners_First_name.grid(column=1, row=0)
+
+Owners_second_name = tk.Label(
+    Owners_Personal_Details_Create_Labelframe, text="Second Name:", bg="blue", fg="purple")
+Owners_second_name.grid(column=2, row=0, sticky="WE")
+Owners_Second_name = tk.Entry(
+    Owners_Personal_Details_Create_Labelframe, width=100)
+Owners_Second_name.grid(column=3, row=0)
+
+# Filling up space.
+Owners_ = tk.Label(
+    Owners_Personal_Details_Create_Labelframe, text="       ", bg="orange")
+Owners_.grid(column=0, row=1)
+
+Owners_third_name = tk.Label(
+    Owners_Personal_Details_Create_Labelframe, text="Third Name:", bg="blue", fg="purple")
+Owners_third_name.grid(column=0, row=4, sticky="WE")
+Owners_Third_name = tk.Entry(Owners_Personal_Details_Create_Labelframe)
+Owners_Third_name.grid(column=1, row=4, sticky="WE")
+
+Owners_admission_number = tk.Label(
+    Owners_Personal_Details_Create_Labelframe, text="plot number:", bg="blue", fg="purple")
+Owners_admission_number.grid(column=2, row=4, sticky="WE")
+Owners_Admission_number = tk.Entry(
+    Owners_Personal_Details_Create_Labelframe)
+Owners_Admission_number.grid(column=3, row=4, sticky="WE")
+
+# Filling up space.
+Owners_ = tk.Label(
+    Owners_Personal_Details_Create_Labelframe, text="       ", bg="orange")
+Owners_.grid(column=0, row=5)
+
+Owners_gender = tk.Label(
+    Owners_Personal_Details_Create_Labelframe, text="Gender:", bg="blue", fg="purple")
+Owners_gender.grid(column=0, row=6, sticky="WE")
+Owners_Gender = tk.Entry(Owners_Personal_Details_Create_Labelframe)
+Owners_Gender.grid(column=1, row=6, sticky="WE")
+
+Owners_phone_number = tk.Label(
+    Owners_Personal_Details_Create_Labelframe, text="Phone number:", bg="blue", fg="purple")
+Owners_phone_number.grid(column=2, row=6)
+Owners_Parent_phone_number = tk.Entry(
+    Owners_Personal_Details_Create_Labelframe)
+Owners_Parent_phone_number.grid(column=3, row=6, sticky="WE")
+
+# Filling up space.
+Owners_ = tk.Label(
+    Owners_Personal_Details_Create_Labelframe, text="       ", bg="orange")
+Owners_.grid(column=0, row=7)
+
+Owners_Create = tk.Button(Owners_Personal_Details_Create_Labelframe,
+                            text="Create Record", bg="yellow", fg="blue", height=6)
+Owners_Create.grid(column=0, row=8, sticky="WE")
+
+
+# Update Owners Records.
+
+
+Owners_Personal_Details_Create_Labelframe = tk.LabelFrame(
+    Update_Owners_Records, bg="black", fg="brown", text="Update Owners Records")
+Owners_Personal_Details_Create_Labelframe.pack(expand=1)
+Owners_first_name = tk.Label(
+    Owners_Personal_Details_Create_Labelframe, text="First Name:", bg="blue", fg="purple")
+Owners_first_name.grid(column=0, row=0, sticky="WE")
+Owners_First_name = tk.Entry(
+    Owners_Personal_Details_Create_Labelframe, width=100)
+Owners_First_name.grid(column=1, row=0)
+
+Owners_second_name = tk.Label(
+    Owners_Personal_Details_Create_Labelframe, text="Second Name:", bg="blue", fg="purple")
+Owners_second_name.grid(column=2, row=0, sticky="WE")
+Owners_Second_name = tk.Entry(
+    Owners_Personal_Details_Create_Labelframe, width=100)
+Owners_Second_name.grid(column=3, row=0)
+
+
+# Filling up space.
+Owners_ = tk.Label(
+    Owners_Personal_Details_Create_Labelframe, text="       ", bg="orange")
+Owners_.grid(column=0, row=1)
+
+Owners_third_name = tk.Label(
+   Owners_Personal_Details_Create_Labelframe, text="Third Name:", bg="blue", fg="purple")
+Owners_third_name.grid(column=0, row=4, sticky="WE")
+Owners_Third_name = tk.Entry(Owners_Personal_Details_Create_Labelframe)
+Owners_Third_name.grid(column=1, row=4, sticky="WE")
+Owners_admission_number = tk.Label(
+   Owners_Personal_Details_Create_Labelframe, text="plot number:", bg="blue", fg="purple")
+Owners_admission_number.grid(column=2, row=4, sticky="WE")
+Owners_Admission_number = tk.Entry(
+    Owners_Personal_Details_Create_Labelframe)
+Owners_Admission_number.grid(column=3, row=4, sticky="WE")
+
+# Filling up space.
+Owners_ = tk.Label(
+    Owners_Personal_Details_Create_Labelframe, text="       ", bg="orange")
+Owners_.grid(column=0, row=5)
+
+Owners_gender = tk.Label(
+    Owners_Personal_Details_Create_Labelframe, text="Gender:", bg="blue", fg="purple")
+Owners_gender.grid(column=0, row=6, sticky="WE")
+Owners_Gender = tk.Entry(Owners_Personal_Details_Create_Labelframe)
+Owners_Gender.grid(column=1, row=6, sticky="WE")
+
+Owners_phone_number = tk.Label(
+    Owners_Personal_Details_Create_Labelframe, text="Phone number:", bg="blue", fg="purple")
+Owners_phone_number.grid(column=2, row=6)
+Owners_Parent_phone_number = tk.Entry(
+    Owners_Personal_Details_Create_Labelframe)
+Owners_Parent_phone_number.grid(column=3, row=6, sticky="WE")
+
+# Filling up space.
+Owners_ = tk.Label(
+    Owners_Personal_Details_Create_Labelframe, text="       ", bg="orange")
+Owners_.grid(column=0, row=7)
+
+Owners_Create = tk.Button(Owners_Personal_Details_Create_Labelframe,
+                            text="Update Record", bg="yellow", fg="blue", height=6)
+Owners_Create.grid(column=0, row=8, sticky="WE")
+
+# Delete Owners Records.
+
+Owners_Personal_Details_Create_Labelframe = tk.LabelFrame(
+    Delete_Owners_Records, bg="pink", fg="maroon", text="Delete Owners Records")
+Owners_Personal_Details_Create_Labelframe.pack(expand=1)
+Owners_first_name = tk.Label(
+    Owners_Personal_Details_Create_Labelframe, text="First Name:", bg="blue", fg="purple")
+Owners_first_name.grid(column=0, row=0, sticky="WE")
+Owners_First_name = tk.Entry(
+    Owners_Personal_Details_Create_Labelframe, width=100)
+Owners_First_name.grid(column=1, row=0)
+
+Owners_second_name = tk.Label(
+    Owners_Personal_Details_Create_Labelframe, text="Second Name:", bg="blue", fg="purple")
+Owners_second_name.grid(column=2, row=0, sticky="WE")
+Owners_Second_name = tk.Entry(
+    Owners_Personal_Details_Create_Labelframe, width=100)
+Owners_Second_name.grid(column=3, row=0)
+
+# Filling up space.
+Owners_ = tk.Label(
+    Owners_Personal_Details_Create_Labelframe, text="       ", bg="orange")
+Owners_.grid(column=0, row=1)
+
+Owners_third_name = tk.Label(
+    Owners_Personal_Details_Create_Labelframe, text="Third Name:", bg="blue", fg="purple")
+Owners_third_name.grid(column=0, row=4, sticky="WE")
+Owners_Third_name = tk.Entry(Owners_Personal_Details_Create_Labelframe)
+Owners_Third_name.grid(column=1, row=4, sticky="WE")
+
+Owners_admission_number = tk.Label(
+    Owners_Personal_Details_Create_Labelframe, text="plot number:", bg="blue", fg="purple")
+Owners_admission_number.grid(column=2, row=4, sticky="WE")
+Owners_Admission_number = tk.Entry(
+    Owners_Personal_Details_Create_Labelframe)
+Owners_Admission_number.grid(column=3, row=4, sticky="WE")
+
+# Filling up space.
+Owners_ = tk.Label(
+    Owners_Personal_Details_Create_Labelframe, text="       ", bg="orange")
+Owners_.grid(column=0, row=5)
+
+Owners_gender = tk.Label(
+    Owners_Personal_Details_Create_Labelframe, text="Gender:", bg="blue", fg="purple")
+Owners_gender.grid(column=0, row=6, sticky="WE")
+Owners_Gender = tk.Entry(Owners_Personal_Details_Create_Labelframe)
+Owners_Gender.grid(column=1, row=6, sticky="WE")
+
+Owners_phone_number = tk.Label(
+    Owners_Personal_Details_Create_Labelframe, text="Phone number:", bg="blue", fg="purple")
+Owners_phone_number.grid(column=2, row=6)
+Owners_phone_number = tk.Entry(
+   Owners_Personal_Details_Create_Labelframe)
+Owners_Parent_phone_number.grid(column=3, row=6, sticky="WE")
+
+# Filling up space.
+Owners_ = tk.Label(
+    Owners_Personal_Details_Create_Labelframe, text="       ", bg="orange")
+Owners_.grid(column=0, row=7)
+
+Owners_Create = tk.Button(Owners_Personal_Details_Create_Labelframe,
+                            text="Delete Record", bg="purple", fg="blue", height=6)
+Owners_Create.grid(column=0, row=8, sticky="WE")
+
+# List of Owners.
+Owners_Personal_Details_Create_Labelframe = tk.LabelFrame(
+    List_of_Owners, bg="orange", fg="purple", text="List of  Owners Records")
+Owners_Personal_Details_Create_Labelframe.pack(expand=1, fill="both")
+Owners_phone_number = tk.Label(
+    Owners_Personal_Details_Create_Labelframe, text="Search using plot Number", bg="blue", fg="purple")
+Owners_phone_number.grid(column=0, row=0)
+Owners_Parent_phone_number = tk.Entry(
+    Owners_Personal_Details_Create_Labelframe)
+Owners_Parent_phone_number.grid(column=1, row=0, sticky="WE")
+Owners_Create = tk.Button(Owners_Personal_Details_Create_Labelframe,
+                            text="Search using plot number", bg="purple", fg="blue", height=4)
+Owners_Create.grid(column=0, row=1, sticky="WE")
+
+# Filling up space.
+Owners_ = tk.Label(
+    Owners_Personal_Details_Create_Labelframe, text="       ", bg="orange")
+Owners_.grid(column=0, row=2)
+
+Owners_list = tk.scrolledtext.ScrolledText(Owners_Personal_Details_Create_Labelframe, width=150)
+Owners_list.grid(column=0, row=3)
+
+# Filling up space.
+Owners_ = tk.Label(
+    Owners_Personal_Details_Create_Labelframe, text="       ", bg="orange")
+Owners_.grid(column=0, row=7)
+
+Owners_Create = tk.Button(Owners_Personal_Details_Create_Labelframe,
+                            text="List Owners Records", bg="purple", fg="blue", height=3)
+Owners_Create.grid(column=0, row=8, sticky="WE")
+
+
+    
+window.mainloop()
