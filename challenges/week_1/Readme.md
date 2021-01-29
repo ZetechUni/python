@@ -29,3 +29,24 @@ Run the [Checker](checker.py) file to evaluate your code. If all tests pass, you
    - `'fare'`  
 *Failure to which all your tests will fail.*  
 3. The **Checker** file should **never** be **altered** at any cost.
+
+
+Initialize todays date
+initialize todays day
+
+IF day == Mon
+   THEN Fare = 100
+ELSE IF day == Tue
+    THEN Fare == 100
+ELSEIF day == Wed
+    THEN Fare == 100
+ELSE IF day == Thur
+    THEN Fare == 100
+ELSE IF day == Fri
+    THEN Fare == 100
+ELSE IF day == Sat
+    Then Fare == 60
+ElSE IF day == Sun
+    Then Fare = 80
+ENDIF
+Print "date,day,fare"
