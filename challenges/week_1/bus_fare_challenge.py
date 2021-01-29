@@ -1,7 +1,8 @@
 from datetime import date
-
+#initialize the date today
 date = date.today()
 
+#obtain the day in the form "Mon", "Tue" etc.
 day = date.strftime("%a")
 
 bus_fare = {
@@ -13,7 +14,9 @@ bus_fare = {
     "Sat":60,
     "Sun":80
 }
+#initialize the fare variable
 fare = None
+#check if the day is in the bus_fare dictionary
 if day in bus_fare:
     print(date)
     print(day)
