@@ -5,7 +5,10 @@ print('Hello world!')
 print('Hello world single quotes')
 
 # Strings can also be enclosed in double quotes
-print("Hello world double quotes")
+print("Hello world - double quotes")
 
-# using print to display integers
+# using print to display integer / whole numbers
 print(188)
+
+# using print to display float number / real number
+print(99.9)
