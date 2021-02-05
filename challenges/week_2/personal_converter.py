@@ -36,10 +36,12 @@ def converter():
             result = "C"
         if num1 in range(50, 60, 1):
             result = "D"
-        if num1 in range(40, 50, 1):
+        if num1 in range(20, 50, 1):
             result = "E"
-        if num1 in range(30, 40, 1):
+        if num1 in range(0, 40, 1):
             result = "F"
+        else:
+            print("Num not in required range")
         result = "{}% = {}".format(num, result)
         print(result)
 
