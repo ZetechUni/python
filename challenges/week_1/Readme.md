@@ -29,3 +29,11 @@ Run the [Checker](checker.py) file to evaluate your code. If all tests pass, you
    - `'fare'`  
 *Failure to which all your tests will fail.*  
 3. The **Checker** file should **never** be **altered** at any cost.
+
+
+Pseudo-code for the project
+
+Step 1: obtain the date today using the datetime module
+step 2: obtain the day in the form of "Mon", "Tue" etc
+step 3: make a list of busfares with an accompanying day 
+step 4: check if the day today is in the list of bus fares and then print the dates and fare.
